@@ -20,6 +20,7 @@ app.all('*', function (req, res, next) {
         res.send();
     } else {
         var targetURL = req.header('target-url');
+        console.log("target url: " + targetURL);
         if (!targetURL) {
             res.send(500, { error: 'There is no Target-Endpoint header in the request' });
             return;
